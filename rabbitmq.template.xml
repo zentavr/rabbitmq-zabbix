@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-02-13T22:56:04Z</date>
+    <date>2014-05-14T19:17:16Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -18,10 +18,10 @@
             </groups>
             <applications>
                 <application>
-                    <name>rabbitmq data</name>
+                    <name>Rabbitmq Data</name>
                 </application>
                 <application>
-                    <name>rabbitmq server</name>
+                    <name>Rabbitmq Server</name>
                 </application>
             </applications>
             <items>
@@ -62,7 +62,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -104,7 +104,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -146,7 +146,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -175,7 +175,7 @@
                     <snmpv3_privpassphrase/>
                     <formula>100</formula>
                     <delay_flex/>
-                    <params>last(&quot;rabbitmq[server,fd_used]&quot;)/last(&quot;rabbitmq[server,fd_total]&quot;)</params>
+                    <params>last(&quot;rabbitmq[server,fd_used]&quot;,0)/last(&quot;rabbitmq[server,fd_total]&quot;,0)</params>
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
@@ -188,7 +188,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -230,7 +230,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -272,7 +272,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -301,7 +301,7 @@
                     <snmpv3_privpassphrase/>
                     <formula>100</formula>
                     <delay_flex/>
-                    <params>last(&quot;rabbitmq[server,mem_used]&quot;)/last(&quot;rabbitmq[server,mem_limit]&quot;)</params>
+                    <params>last(&quot;rabbitmq[server,mem_used]&quot;,0)/last(&quot;rabbitmq[server,mem_limit]&quot;,0)</params>
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
@@ -314,7 +314,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -356,7 +356,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -398,7 +398,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -427,7 +427,7 @@
                     <snmpv3_privpassphrase/>
                     <formula>100</formula>
                     <delay_flex/>
-                    <params>last(&quot;rabbitmq[server,sockets_used]&quot;)/last(&quot;rabbitmq[server,sockets_total]&quot;)</params>
+                    <params>last(&quot;rabbitmq[server,sockets_used]&quot;,0)/last(&quot;rabbitmq[server,sockets_total]&quot;,1)</params>
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
@@ -440,7 +440,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -482,7 +482,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -524,7 +524,7 @@
                     <inventory_link>18</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -566,7 +566,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>rabbitmq server</name>
+                            <name>Rabbitmq Server</name>
                         </application>
                     </applications>
                     <valuemap/>
@@ -574,12 +574,12 @@
             </items>
             <discovery_rules>
                 <discovery_rule>
-                    <name>rabbitmq queues</name>
+                    <name>Rabbitmq Nodes in cluster</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>rabbitmq.discovery_queue</key>
-                    <delay>30</delay>
+                    <key>rabbitmq.discovery_nodes</key>
+                    <delay>60</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -599,7 +599,93 @@
                     <privatekey/>
                     <port/>
                     <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <lifetime>7</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>RabbitMQ node $3 is functional</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>rabbitmq[server,running,{#NODENAME}]</key>
+                            <delay>90</delay>
+                            <history>7</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>3</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Shows if the node is a functional in the cluster</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Rabbitmq Data</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template App RabbitMQ v2:rabbitmq[server,running,{#NODENAME}].last(2)}&lt;1</expression>
+                            <name>{HOSTNAME} does not see {#NODENAME} as a functional cluster member</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Rabbitmq Queues</name>
+                    <type>7</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>rabbitmq.discovery_queue</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>:</filter>
+                    <lifetime>7</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
@@ -608,7 +694,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>rabbitmq[{#VHOSTNAME},queue_consumers,{#QUEUENAME}]</key>
+                            <key>rabbitmq[{#VHOSTNAME},queue_messages_unacknowledged,{#QUEUENAME}]</key>
                             <delay>0</delay>
                             <history>7</history>
                             <trends>90</trends>
@@ -639,49 +725,7 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>rabbitmq data</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>RabbitMQ  $2 on vhost $1, queue $3</name>
-                            <type>2</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>rabbitmq[{#VHOSTNAME},queue_memory,{#QUEUENAME}]</key>
-                            <delay>0</delay>
-                            <history>7</history>
-                            <trends>90</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units>B</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>rabbitmq data</name>
+                                    <name>Rabbitmq Data</name>
                                 </application>
                             </applications>
                             <valuemap/>
@@ -723,7 +767,7 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>rabbitmq data</name>
+                                    <name>Rabbitmq Data</name>
                                 </application>
                             </applications>
                             <valuemap/>
@@ -734,7 +778,49 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>rabbitmq[{#VHOSTNAME},queue_messages_unacknowledged,{#QUEUENAME}]</key>
+                            <key>rabbitmq[{#VHOSTNAME},queue_memory,{#QUEUENAME}]</key>
+                            <delay>0</delay>
+                            <history>7</history>
+                            <trends>90</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>B</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Rabbitmq Data</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>RabbitMQ  $2 on vhost $1, queue $3</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>rabbitmq[{#VHOSTNAME},queue_consumers,{#QUEUENAME}]</key>
                             <delay>0</delay>
                             <history>7</history>
                             <trends>90</trends>
@@ -765,7 +851,7 @@
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
-                                    <name>rabbitmq data</name>
+                                    <name>Rabbitmq Data</name>
                                 </application>
                             </applications>
                             <valuemap/>
@@ -777,13 +863,13 @@
                             <name>No consumer and messages found on {#VHOSTNAME}/{#QUEUENAME}</name>
                             <url/>
                             <status>0</status>
-                            <priority>4</priority>
+                            <priority>1</priority>
                             <description/>
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>({Template App RabbitMQ v2:rabbitmq[{#VHOSTNAME},queue_messages,{#QUEUENAME}].last(0)}&gt;1000)</expression>
-                            <name>{#NODENAME}/{#VHOSTNAME}/{#QUEUENAME} - CRITICAL</name>
+                            <expression>({Template App RabbitMQ v2:rabbitmq[{#VHOSTNAME},queue_messages,{#QUEUENAME}].avg(3600)}&gt;10000)</expression>
+                            <name>Too much messages in the queue {HOST.HOST}/{#VHOSTNAME}/{#QUEUENAME} - CRITICAL</name>
                             <url>http://{#FQDN}:15672/#/queues/</url>
                             <status>0</status>
                             <priority>4</priority>
@@ -791,8 +877,8 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App RabbitMQ v2:rabbitmq[{#VHOSTNAME},queue_messages,{#QUEUENAME}].last(0)}&gt;500 &amp; {Template App RabbitMQ v2:rabbitmq[{#VHOSTNAME},queue_messages,{#QUEUENAME}].last(0)}&lt;1000</expression>
-                            <name>{#NODENAME}/{#VHOSTNAME}/{#QUEUENAME} - Warning</name>
+                            <expression>{Template App RabbitMQ v2:rabbitmq[{#VHOSTNAME},queue_messages,{#QUEUENAME}].avg(3600)}&gt;5000 &amp; {Template App RabbitMQ v2:rabbitmq[{#VHOSTNAME},queue_messages,{#QUEUENAME}].avg(3600)}&lt;10000</expression>
+                            <name>Too much messages in the queue {HOST.HOST}/{#VHOSTNAME}/{#QUEUENAME} - Warning</name>
                             <url>http://{#FQDN}:15672/#/queues/</url>
                             <status>0</status>
                             <priority>2</priority>
@@ -811,17 +897,22 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template App RabbitMQ v2:rabbitmq.server.filedesc.percentused.last(0)}&gt;50</expression>
+            <expression>{Template App RabbitMQ v2:rabbitmq.server.filedesc.percentused.last(3)}&gt;50</expression>
             <name>Percent file descriptors greater than 50%</name>
             <url/>
             <status>0</status>
             <priority>2</priority>
             <description/>
             <type>0</type>
-            <dependencies/>
+            <dependencies>
+                <dependency>
+                    <name>Percent file descriptors greater than 75%</name>
+                    <expression>{Template App RabbitMQ v2:rabbitmq.server.filedesc.percentused.last(3)}&gt;75</expression>
+                </dependency>
+            </dependencies>
         </trigger>
         <trigger>
-            <expression>{Template App RabbitMQ v2:rabbitmq.server.filedesc.percentused.last(0)}&gt;75</expression>
+            <expression>{Template App RabbitMQ v2:rabbitmq.server.filedesc.percentused.last(3)}&gt;75</expression>
             <name>Percent file descriptors greater than 75%</name>
             <url/>
             <status>0</status>
@@ -831,17 +922,22 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template App RabbitMQ v2:rabbitmq.server.mem.percentused.last(0)}&gt;50</expression>
+            <expression>{Template App RabbitMQ v2:rabbitmq.server.mem.percentused.last(3)}&gt;50</expression>
             <name>Percent memory use greater than 50%</name>
             <url/>
             <status>0</status>
             <priority>2</priority>
             <description/>
             <type>0</type>
-            <dependencies/>
+            <dependencies>
+                <dependency>
+                    <name>Percent memory use greater than 75%</name>
+                    <expression>{Template App RabbitMQ v2:rabbitmq.server.mem.percentused.last(3)}&gt;75</expression>
+                </dependency>
+            </dependencies>
         </trigger>
         <trigger>
-            <expression>{Template App RabbitMQ v2:rabbitmq.server.mem.percentused.last(0)}&gt;75</expression>
+            <expression>{Template App RabbitMQ v2:rabbitmq.server.mem.percentused.last(3)}&gt;75</expression>
             <name>Percent memory use greater than 75%</name>
             <url/>
             <status>0</status>
@@ -851,17 +947,22 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template App RabbitMQ v2:rabbitmq.server.sockets.percentused.last(0)}&gt;50</expression>
+            <expression>{Template App RabbitMQ v2:rabbitmq.server.sockets.percentused.last(3)}&gt;50</expression>
             <name>Percent sockets in use greater than 50%</name>
             <url/>
             <status>0</status>
             <priority>2</priority>
             <description/>
             <type>0</type>
-            <dependencies/>
+            <dependencies>
+                <dependency>
+                    <name>Percent sockets in use greater than 75%</name>
+                    <expression>{Template App RabbitMQ v2:rabbitmq.server.sockets.percentused.last(3)}&gt;75</expression>
+                </dependency>
+            </dependencies>
         </trigger>
         <trigger>
-            <expression>{Template App RabbitMQ v2:rabbitmq.server.sockets.percentused.last(0)}&gt;75</expression>
+            <expression>{Template App RabbitMQ v2:rabbitmq.server.sockets.percentused.last(3)}&gt;75</expression>
             <name>Percent sockets in use greater than 75%</name>
             <url/>
             <status>0</status>
@@ -871,7 +972,7 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template App RabbitMQ v2:net.tcp.port[127.0.0.1,5672].last(0)}=0</expression>
+            <expression>{Template App RabbitMQ v2:net.tcp.port[127.0.0.1,5672].last(3)}=0</expression>
             <name>RabbitMQ is down on {HOSTNAME}</name>
             <url/>
             <status>0</status>
