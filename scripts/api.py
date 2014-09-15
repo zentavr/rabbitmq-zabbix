@@ -83,6 +83,41 @@ class RabbitMQAPI(object):
         os.unlink(rdatafile.name)
         return return_code
 
+    def overview(self):
+        '''
+        Return an overview of the whole cluster:
+        # queued messages:
+           - messages_ready
+           - messages_unacknowledged
+           - messages_total
+        # Message Rates:
+           - publish
+           - deliver
+           - redelivered
+           - acknowledge
+        '''
+        return_code = 0
+        rdatafile = tempfile.NamedTemporaryFile(delete=False)
+        overview = self.call_api('overview') # We should have parsed JSON here
+
+        # message_stats
+        for rate in ['publish', 'ack', 'deliver', 'redeliver']:
+            key = '"rabbitmq[overview,msg_%s_rate]"' % (rate)
+            details = '%s_details' % (rate)
+            value = overview.get('message_stats',{}).get(details,{}).get('rate',0)
+            rdatafile.write("- %s %2f\n" % (key, value))
+
+        # Queue stats
+        for messages in ['messages', 'messages_ready', 'messages_unacknowledged']:
+            key = '"rabbitmq[overview,%s]"' % (messages)
+            value = overview.get('queue_totals',{}).get(messages,0)
+            rdatafile.write("- %s %2f\n" % (key, value))
+
+        rdatafile.close()
+        #return_code |= self._send_data(rdatafile)
+        #os.unlink(rdatafile.name)
+        return return_code
+
     def _prepare_data(self, queue, tmpfile):
         '''Prepare the queue data for sending'''
         for item in ['memory', 'messages', 'messages_unacknowledged',
@@ -117,7 +152,7 @@ class RabbitMQAPI(object):
 def main():
     '''Command-line parameters and decoding for Zabbix use/consumption.'''
     choices = ['list_queues', 'list_nodes', 'queues', 'check_aliveness', 
-               'server']
+               'server', 'overview']
     parser = optparse.OptionParser()
     parser.add_option('--username', help='RabbitMQ API username',
                       default='guest')
@@ -154,6 +189,8 @@ def main():
         print json.dumps({'data': api.list_nodes()})
     elif options.check == 'queues':
         print api.check_queue(filters)
+    elif options.check == 'overview':
+        print api.overview()
     elif options.check == 'check_aliveness':
         print api.check_aliveness()
     elif options.check == 'server':
