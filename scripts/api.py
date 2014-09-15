@@ -114,8 +114,8 @@ class RabbitMQAPI(object):
             rdatafile.write("- %s %2f\n" % (key, value))
 
         rdatafile.close()
-        #return_code |= self._send_data(rdatafile)
-        #os.unlink(rdatafile.name)
+        return_code |= self._send_data(rdatafile)
+        os.unlink(rdatafile.name)
         return return_code
 
     def _prepare_data(self, queue, tmpfile):
